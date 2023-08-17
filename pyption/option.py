@@ -20,7 +20,7 @@ class Some(typing.Generic[Value]):
     value: Value
 
     def __repr__(self) -> str:
-        return f"Some({self.value!r})"
+        return f"<Option: Some({self.value!r})>"
 
     def __bool__(self) -> bool:
         return True
@@ -49,7 +49,7 @@ class Some(typing.Generic[Value]):
 
 class NothingType:
     def __repr__(self) -> str:
-        return "Nothing"
+        return "<Option: Nothing>"
 
     def __bool__(self) -> bool:
         return False
