@@ -42,6 +42,6 @@ def cast_obj(obj: object, tp: type[T]) -> Option[T]:
 
 assert cast_obj("123", int).unwrap() == 123  # ok, some value!
 assert cast_obj(123, tuple[int]).unwrap_or(tuple()) == tuple()  # ok, alternate value!
-assert cast_obj((("name", "Max",),), dict[str, str]).map(lambda d: d["name"]).unwrap() == "Max"  # ok, value from map!
+assert cast_obj((("name", "Max",),), dict[str, str]).map(lambda d: d["name"]).unwrap() == "Max"  # ok, some value from map!
 assert cast_obj(999, set[int])  # fail, nothing!
 ```
