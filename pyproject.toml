@@ -1,10 +1,23 @@
 [tool.poetry]
 name = "pyption"
-version = "0.1.0"
+version = "1.0.0"
 description = "type Option, Some contains some value and Nothing contains absolutely nothing."
 authors = ["Georgy Kritov <howluwqz1@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/luwqz1/telegrinder_templating"
+repository = "https://github.com/luwqz1/telegrinder_templating"
+keywords = ["python", "option type", "rust option", "some nothing"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Communications :: Chat",
+    "Topic :: Internet",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"

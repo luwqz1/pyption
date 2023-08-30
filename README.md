@@ -12,7 +12,7 @@ pip install pyption
 * type `Option` -> *Some[*`Value`*]* | *NothingType*
 * *Some(`value: Value`)*
 * *NothingType()*
-* *Alias* `Nothing` *for NothingType instance*
+* *Nothing* -> `singleton`
   
 Option methods:
 * unwrap
@@ -45,3 +45,5 @@ assert cast_obj(123, tuple[int]).unwrap_or(tuple()) == tuple()  # ok, alternate 
 assert cast_obj((("name", "Max",),), dict[str, str]).map(lambda d: d["name"]).unwrap() == "Max"  # ok, some value from map!
 assert cast_obj(999, set[int])  # fail, nothing!
 ```
+
+Example usage [*HERE*](https://github.com/luwqz1/pyption/blob/main/example.py)
