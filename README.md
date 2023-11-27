@@ -12,7 +12,7 @@ pip install pyption
 * type `Option` -> *Some[*`Value`*]* | *NothingType*
 * *Some(`value: Value`)*
 * *NothingType()*
-* *Nothing* -> `singleton`
+* *Nothing* -> `constant`
   
 Option methods:
 * unwrap
