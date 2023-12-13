@@ -1,7 +1,6 @@
 # pyption
 
-type Option, Some contains some value and Nothing contains absolutely nothing.
-
+Option - Some contains some value and Nothing contains absolutely nothing.
 
 Install using PyPI:
 
@@ -9,7 +8,7 @@ Install using PyPI:
 pip install pyption
 ```
 
-* type `Option` -> *Some[*`Value`*]* | *NothingType*
+* Type alias `Option` -> *Some[*`Value`*]* | *NothingType*
 * *Some(`value: Value`)*
 * *NothingType()*
 * *Nothing* -> `constant`
