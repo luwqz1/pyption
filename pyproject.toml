@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pyption"
 version = "1.0.0"
-description = "type Option, Some contains some value and Nothing contains absolutely nothing."
+description = "Option - Some contains some value and Nothing contains absolutely nothing."
 authors = ["Georgy Kritov <howluwqz1@gmail.com>"]
 license = "MIT"
 readme = "README.md"
