@@ -86,5 +86,5 @@ class NothingType:
         raise error if isinstance(error, BaseException) else Exception(error)
 
 
-Option = Some[Value] | NothingType
-Nothing = NothingType()
+Option: typing.TypeAlias = Some[Value] | NothingType
+Nothing: typing.Final[NothingType] = NothingType()
