@@ -5,7 +5,7 @@ import typing
 
 import typing_extensions
 
-__all__ = ["Nothing", "NothingType", "Some", "Option"]
+__all__ = ("Nothing", "NothingType", "Some", "Option")
 
 T = typing.TypeVar("T")
 Value = typing.TypeVar("Value", covariant=True)
@@ -15,14 +15,15 @@ Value = typing.TypeVar("Value", covariant=True)
     repr=False,
     frozen=True,
     kw_only=False,
+    unsafe_hash=True,
 )
 class Some(typing.Generic[Value]):
     value: Value
 
     def __repr__(self) -> str:
-        return f"<Option: Some({self.value!r})>"
+        return f"Some({self.value!r})"
 
-    def __bool__(self) -> bool:
+    def __bool__(self) -> typing.Literal[True]:
         return True
 
     def unwrap(self) -> Value:
@@ -49,9 +50,9 @@ class Some(typing.Generic[Value]):
 
 class NothingType:
     def __repr__(self) -> str:
-        return "<Option: Nothing>"
+        return "Nothing"
 
-    def __bool__(self) -> bool:
+    def __bool__(self) -> typing.Literal[False]:
         return False
 
     def __eq__(self, __value: object) -> bool:
@@ -65,7 +66,7 @@ class NothingType:
         return None.__hash__()
 
     def unwrap(self) -> typing.NoReturn:
-        raise ValueError("Nothing to unwrap")
+        raise ValueError("Nothing to unwrap.")
 
     def unwrap_or(self, alternate_value: T, /) -> T:
         return alternate_value
